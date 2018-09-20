@@ -1,0 +1,17 @@
+<h1>Test Component</h1>
+
+<div>
+	<input type="text" [(ngModel)]="name" placeholder="Enter text to see">					<!--Use of [(ngModel)] directive-->
+	<marquee   style="color:red;"><span *ngIf="name">Welcome</span> {{name}}</marquee>               <!--Use of *ngIf directive-->
+</div>
+
+<h2 *ngIf="name;else elseBlock">This is the If part of ngIf</h2>
+
+<ng-template #elseBlock>
+<h2>This is the else Part of ngIf</h2>
+</ng-template>
+
+
+<h4 style="color:cyan">This is Component Intraction from P to C, {{parentData}}</h4>
+
+<h3>Click to check flow data from child to parent</h3><button (click)="dataFlow()">Click</button>
